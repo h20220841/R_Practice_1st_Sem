@@ -1,0 +1,24 @@
+---
+title: "Python & R in markdown file"
+author: "Rahul Kumar"
+date: "2022-11-25"
+output: html_document
+---
+
+## Running R inside Rmarkdown
+R & Rstudio can be used to run Python code as well, for this you need to have the python interpreter installed in your system. Here is a r markdown file which runs both R & Python.
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+for(i in 1:3){ # R syntax to implement a for loop
+    i = i + 1 # R's syntax for increment by 1
+    cat(i,'\n')
+}
+```
+
+```{python setup1, include=TRUE}
+for i in range(1,4): # For loop for range 2 to 4
+    i = i + 1 # Python allows shorthand increment syntax
+    print(i)
+```
+
